@@ -72,7 +72,8 @@
         }
 
         .wrapper {
-            min-height: 100%;
+            min-height: 100vh; /* 100% of the viewport height */
+            /* min-height: 100%; */
             position: relative;
         padding-bottom:100px; /* footer's height */
         }
@@ -118,11 +119,12 @@
         </div>
     </div>
 
-    <div style="position: relative; bottom: 0;">
+    <div style="position: relative;">
         <footer>
             <img src="images/footer.png" alt="Footer Image">
         </footer>
     </div>
+    
 
     <script>
         const passwordInput = document.getElementById("password");
