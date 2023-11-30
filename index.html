@@ -11,12 +11,22 @@
             --font-family: 'Roboto', sans-serif;
         }
 
+        
+        .wrapper {
+            flex: 1; /* Allow the wrapper to grow and take available space */
+            display: flex;
+            flex-direction: column;
+        }
+
         body {
             font-family: var(--font-family);
             margin: 0;
             padding: 0;
             background-color: #EFE7DA;
             color: #002626;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
         }
 
         header, footer {
@@ -31,12 +41,14 @@
 
         footer {
             bottom: 0;
+            margin-top: auto; /* Push the footer to the bottom */
         }
 
         img {
             width: 100%;
             height: 100px;
             display: block;
+            z-index: -999;
         }
 
         .container {
@@ -76,6 +88,7 @@
     <header>
         <img src="images/header.png" alt="Header Image">
     </header>
+    <div class="wrapper" style="flex: 1; display: flex; flex-direction: column; margin: 30px;">
 
     <div class="container">
         <div style="text-align: center; color: #002626; font-size: 40px; font-weight: 700; word-wrap: break-word">Welcome Back!</div>        
@@ -109,7 +122,7 @@
         <div style="color: #002626; font-size: 20px; font-weight: 700; word-wrap: break-word">Don’t have an account? </div>
         <a href="signup.html" style="color: #DA4A21; font-size: 20px; font-weight: 700; text-decoration: underline; word-wrap: break-word">Sign up!</a>
     </div>
-
+    </div>
 
     <footer>
         <img src="images/footer.png" alt="Footer Image">
