@@ -140,19 +140,18 @@
 
         const inputs = document.querySelectorAll('input');
 
-        const focusHandler = () => {
+        const touchStartHandler = () => {
             document.querySelector('footer').classList.add('hide-footer');
         };
-
-        const focusoutHandler = () => {
+        
+        const touchEndHandler = () => {
             document.querySelector('footer').classList.remove('hide-footer');
         };
-
+        
         inputs.forEach(input => {
-            input.addEventListener('focus', focusHandler);
-            input.addEventListener('focusout', focusoutHandler);
+            input.addEventListener('touchstart', touchStartHandler);
+            input.addEventListener('touchend', touchEndHandler);
         });
-
     </script>
 </body>
 </html>
