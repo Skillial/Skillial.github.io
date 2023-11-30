@@ -150,7 +150,7 @@
 
         inputs.forEach(input => {
             input.addEventListener('focus', focusHandler);
-            input.addEventListener('blur', blurHandler); // Change 'focusout' to 'blur'
+            input.addEventListener('focusout', focusoutHandler);
         });
 
     </script>
